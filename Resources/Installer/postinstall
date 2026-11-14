@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+
+label=local.lanshare.macos.helper
+if [ "$3" = / ]; then
+    if /bin/launchctl print "system/$label" >/dev/null 2>&1; then
+        /bin/launchctl bootout "system/$label"
+    fi
+    /bin/launchctl enable "system/$label"
+    /bin/launchctl bootstrap system "/Library/LaunchDaemons/$label.plist"
+fi
