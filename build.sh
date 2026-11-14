@@ -10,6 +10,7 @@ mkdir -p "$bundle/Contents/MacOS" "$bundle/Contents/Resources" "$output_dir"
 cache_dir="$project_dir/.build/module-cache"
 mkdir -p "$cache_dir"
 cp "$project_dir/Resources/Info.plist" "$bundle/Contents/Info.plist"
+install -m 644 "$project_dir/Resources/LanShare.icns" "$bundle/Contents/Resources/LanShare.icns"
 
 sdk="$(xcrun --sdk macosx --show-sdk-path)"
 minimum_macos="$(/usr/libexec/PlistBuddy -c 'Print :LSMinimumSystemVersion' "$bundle/Contents/Info.plist")"

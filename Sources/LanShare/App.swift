@@ -25,6 +25,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         let appItem = NSMenuItem()
         menu.addItem(appItem)
         let appMenu = NSMenu()
+        let about = appMenu.addItem(withTitle: "About LAN Share",
+                                    action: #selector(NSApplication.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
+        about.target = NSApp
+        appMenu.addItem(.separator())
         appMenu.addItem(withTitle: "Quit LAN Share", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         appItem.submenu = appMenu
         NSApp.mainMenu = menu
@@ -142,11 +146,11 @@ struct ShareView: View {
 
     private var header: some View {
         HStack(spacing: 12) {
-            Image(systemName: "point.3.connected.trianglepath.dotted")
-                .font(.system(size: 23, weight: .medium))
-                .foregroundStyle(ink)
+            Image(nsImage: NSApp.applicationIconImage)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 56, height: 56)
                 .frame(width: 46, height: 46)
-                .background(ink.opacity(0.12), in: RoundedRectangle(cornerRadius: 13))
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 2) {
                 Text("LAN Share").font(.system(size: 24, weight: .semibold))
