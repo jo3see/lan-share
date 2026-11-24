@@ -1,3 +1,8 @@
 /dist/
 /.build/
 .DS_Store
+
+# Local development notes contain device-specific diagnostics.
+/docs/tethernest-implementation-plan.md
+/docs/windows-ethernet-acceptance.md
+/windows/releases/

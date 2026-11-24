@@ -1,3 +1,10 @@
+# TetherNest / LAN Share
+
+**TetherNest Rev 0.1 for Windows is an early beta.** Native Windows ARM64 and x64 portable packages are published as a GitHub prerelease. See the [Windows guide](windows/README.md), [iPhone setup](docs/setup/iphone-setup.md), and [release notes](docs/releases/tethernest-v0.1.0-beta.1.md).
+
+The original macOS LAN Share application and its history remain below. This checkpoint does not implement Rev 0.2 tray or automatic-connect features.
+
+---
 # LAN Share
 
 LAN Share is a small macOS app that shares your Mac’s internet connection through another network adapter. It uses macOS Internet Sharing.

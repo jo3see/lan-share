@@ -1,0 +1,63 @@
+Architecture: Arm64
+PASS: new session is idle and nonmutating
+PASS: start journals and owns configured pair
+PASS: settled state is journaled
+PASS: duplicate Start rejected
+PASS: Stop restores automatic addressing and clears verified journal
+PASS: repeated Stop is idempotent
+PASS: matching existing sharing is observed
+PASS: Stop leaves existing sharing untouched
+PASS: unrelated sharing rejected
+PASS: conflict does not mutate or journal
+PASS: custom destination configuration rejected
+PASS: journal failure prevents start
+PASS: no network writes before durable journal
+PASS: failure before first network change is safe
+PASS: no-op failed start leaves no recovery debt
+PASS: missing start postcondition triggers rollback
+PASS: failed verification restores baseline
+PASS: failed private sharing triggers rollback
+PASS: partial source sharing restored
+PASS: ambiguous interrupted mutation reports recovery
+PASS: unknown side effects retain journal
+PASS: failed Stop leaves recovery pending
+PASS: failed restore keeps journal
+PASS: fresh engine recovers known state
+PASS: automatic-address restore failure remains pending
+PASS: journal survives IP restoration failure
+PASS: retry completes address restoration
+PASS: external address changes protected
+PASS: external conflict leaves settings untouched
+PASS: external sharing changes protected
+PASS: no writes over external sharing
+PASS: missing adapter keeps recovery pending
+PASS: missing adapter journal retained
+PASS: reconnected adapter can be restored
+PASS: link loss stops owned sharing
+PASS: session totals use destination deltas
+PASS: counter reset avoids negative or inflated total
+PASS: missing samples rebaseline without invented traffic
+PASS: already enabled DHCP does not prevent DNS restoration
+PASS: automatic configuration needs no redundant netsh writes
+PASS: address restoration re-reads DNS changed by Windows
+PASS: missing adapter fails before configuration writes
+PASS: missing adapter causes no restoration commands
+PASS: phone sequence cycles Bluetooth before joining and verifying
+PASS: healthy existing phone connection avoids disruptive restart
+PASS: failed internet check restores prior Wi-Fi
+PASS: external Wi-Fi change during Bluetooth cycle is preserved
+PASS: failed verification never replaces an external Wi-Fi selection
+PASS: resetting an unhealthy current hotspot permits its expected disconnect
+PASS: cancelled phone operation does not touch network or radio
+PASS: partially failed join restores previous Wi-Fi
+PASS: no previous Wi-Fi does not invent a restore target
+PASS: reported five-entry inventory yields only connected usable source
+PASS: duplicate adapter identity is not repeated
+PASS: filter interfaces are not internet sources
+PASS: connected source without IPv4 gateway is not offered for this milestone
+PASS: distinct legitimate sources survive identical descriptions
+PASS: multiple real sources have friendly distinct labels
+PASS: repeated/reordered refresh preserves selection without accumulation
+PASS: changed adapter details preserve selection by identity
+PASS: disappeared source falls back to remaining eligible source
+61 checks passed.
